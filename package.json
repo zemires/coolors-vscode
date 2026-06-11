@@ -6,6 +6,7 @@
 	"publisher": "zemires",
 	"icon": "icon_coolors.png",
 	"private": true,
+	"preview": true,
 	"author": {
 		"name": "Zemires, Laurent Christen"
 	},
