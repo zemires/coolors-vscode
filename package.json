@@ -6,6 +6,9 @@
 	"publisher": "zemires",
 	"icon": "icon_coolors.png",
 	"private": true,
+	"author": {
+		"name": "Zemires, Laurent Christen"
+	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
