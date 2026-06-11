@@ -6,3 +6,8 @@ src/**
 .gitignore
 tsconfig.json
 vsc-extension-quickstart.md
+.claude/**
+.github/**
+CLAUDE.md
+eslint.config.mjs
+**/*.vsix
