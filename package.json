@@ -4,6 +4,7 @@
 	"description": "Coolors integration for VS Code",
 	"version": "0.0.1",
 	"publisher": "zemires",
+	"icon": "icon_coolors.png",
 	"private": true,
 	"license": "MIT",
 	"repository": {
