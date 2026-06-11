@@ -2,8 +2,6 @@
 
 Explore and explain colors from your code on [coolors.co](https://coolors.co) — without leaving VS Code.
 
-![Demo](demo.gif)
-
 ## Features
 
 - **Ctrl+Click any color** — hold <kbd>Ctrl</kbd> over a color value to underline it like a link, then click to open the coolors.co page for that color.
