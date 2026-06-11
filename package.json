@@ -2,7 +2,7 @@
 	"name": "coolors-vscode",
 	"displayName": "Coolors",
 	"description": "Coolors integration for VS Code",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "zemires",
 	"icon": "icon_coolors.png",
 	"private": true,
