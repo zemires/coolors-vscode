@@ -1,0 +1,113 @@
+{
+	"name": "coolors-vscode",
+	"displayName": "Coolors",
+	"description": "Coolors integration for VS Code",
+	"version": "0.0.1",
+	"publisher": "zemires",
+	"private": true,
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zemires/coolors-vscode"
+	},
+	"engines": {
+		"vscode": "^1.100.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"color",
+		"colors",
+		"coolors",
+		"palette",
+		"hex"
+	],
+	"capabilities": {
+		"virtualWorkspaces": true,
+		"untrustedWorkspaces": {
+			"supported": true
+		}
+	},
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "coolors.explainInCoolors",
+				"title": "Explain in coolors.co"
+			},
+			{
+				"command": "coolors.openInBrowser",
+				"title": "coolors: Open in Browser"
+			}
+		],
+		"configuration": {
+			"title": "coolors",
+			"properties": {
+				"coolors.openLocation": {
+					"type": "string",
+					"enum": [
+						"editorTab",
+						"sidebar"
+					],
+					"enumDescriptions": [
+						"Open each color as a new editor tab beside the current editor.",
+						"Show the color in the coolors side bar view (only the latest color is shown). Drag the view into the secondary side bar once and VS Code will remember the placement."
+					],
+					"default": "sidebar",
+					"description": "Where to open the coolors.co page."
+				}
+			}
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "coolors",
+					"title": "coolors",
+					"icon": "$(symbol-color)"
+				}
+			]
+		},
+		"views": {
+			"coolors": [
+				{
+					"type": "webview",
+					"id": "coolors.colorView",
+					"name": "coolors.co"
+				}
+			]
+		},
+		"menus": {
+			"editor/context": [
+				{
+					"command": "coolors.explainInCoolors",
+					"when": "editorTextFocus && coolors.cursorOnColor",
+					"group": "navigation"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "coolors.explainInCoolors"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.13.0",
+		"@stylistic/eslint-plugin": "^2.9.0",
+		"@types/node": "^22",
+		"@types/vscode": "^1.100.0",
+		"eslint": "^9.13.0",
+		"typescript": "^5.8.2",
+		"typescript-eslint": "^8.26.0"
+	}
+}
